@@ -1,0 +1,188 @@
+.contenedor {
+  width: 90%;
+  max-width: 1300px;
+  margin: 20px auto;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "header header header" "contenido contenido sidebar" "tarjeta-1 tarjeta-2 sidebar" "footer footer footer";
+}
+
+.contenedor .header {
+  background-color: rgba(10, 1, 1, 0.788);
+  grid-area: header;
+}
+
+h2 {
+  padding-left: 10px;
+  padding: 10px;
+}
+
+.contenedor .contenido {
+  grid-area: contenido;
+}
+
+a {
+  flex-direction: row;
+  padding: 10px;
+  color: #ffff;
+  text-decoration: none;
+}
+
+h2 {
+  border: 2px solid rgba(0, 0, 0, 0.486);
+  border-radius: 6px;
+  width: 30%;
+  background-color: rgba(160, 19, 19, 0.26);
+}
+
+header {
+  background-color: green;
+}
+
+.contenedor .tarjeta-1,
+.contenedor .tarjeta-2 {
+  background-color: rgba(255, 0, 0, 0.349);
+  height: 100px;
+  text-align: center;
+}
+
+.contenedor .tarjeta-1 {
+  background-image: url(./img/aurelien-dunglas-midieval-building-01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: auto;
+  background-position-y: -100px;
+  height: 300px;
+  grid-area: tarjeta-1;
+}
+
+.contenedor .tarjeta-2 {
+  background-image: url(./img/raquel-ribeiro-kitchen.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: -50px;
+  background-position-y: 0px;
+  height: 300px;
+  grid-area: tarjeta-2;
+}
+
+.contenedor .footer {
+  background-color: rgba(31, 10, 10, 0.082);
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: auto;
+  background-image: url(./img/sylvain-sarrailh-tavern.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 35px;
+  color: whitesmoke;
+  font-family: verdana;
+  /*Responvie celulares*/
+  /*Pagina de cursos*/
+}
+body .contenedor > div,
+body .contenedor .header,
+body .contenedor .contenido,
+body .contenedor .sidebar,
+body .contenedor .footer {
+  background: rgba(145, 13, 13, 0.226);
+  padding: 20px;
+  border-radius: 4px;
+}
+body .contenedor .sidebar {
+  background-image: url(./img/867cf494695801.5e851406073d9\(1\).jpg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  height: 620px;
+  grid-column: 3/4;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  min-height: 300px;
+  grid-row: 2/4;
+  grid-area: sidebar;
+}
+@media screen and (max-width: 765px) {
+  body .contenedor {
+    grid-template-areas: "header header header" "contenido contenido sidebar" "tarjeta-1 tarjeta-2 tarjeta-2" "footer footer footer";
+  }
+  body .contenedor .sidebar {
+    background-size: cover;
+    height: 750px;
+  }
+  body .contenedor .contenido {
+    max-height: 800px;
+  }
+  body .contenedor .tarjeta-1 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -50px;
+    background-position-y: 0px;
+    height: 200px;
+  }
+  body .contenedor .tarjeta-2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: -50px;
+    background-position-y: 0px;
+    height: 200px;
+  }
+}
+body .fondo-cursos {
+  height: auto;
+  background-image: url(./img/sylvain-sarrailh-tavern.jpg);
+  background-repeat: no-repeat;
+  background-size: 150%;
+  color: whitesmoke;
+}
+body .table {
+  background-color: #0a0909;
+}
+body .row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: rgba(107, 42, 42, 0.507);
+}
+body .row:hover {
+  background-color: rgba(61, 13, 25, 0.904);
+}
+body .title {
+  display: flex;
+  justify-content: center;
+  background-color: #352525;
+}
+body .header .row {
+  padding: 10px;
+  background-color: #8b3838;
+}
+body .header .row div {
+  display: flex;
+  justify-content: center;
+  font-weight: 800px;
+  color: #cecbcb;
+}
+body .body .row {
+  padding: 30px;
+}
+body .body .row div {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=estilos.css.map */
